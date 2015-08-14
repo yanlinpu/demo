@@ -1,0 +1,17 @@
+%p#notice= notice
+
+- set_product_cache(@product)
+
+- cache @product do
+  %p
+    %b Name:
+    = @product.name
+  %p
+    %b Price:
+    = @product.price
+  %p
+    = @result
+
+= link_to 'Edit', edit_product_path(@product)
+\|
+= link_to 'Back', products_path

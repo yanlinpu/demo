@@ -1,0 +1,51 @@
+%h1 Listing products
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Price
+      %th
+      %th
+      %th
+
+  %tbody
+    - #Read fragment views/products/1-20150814031140000000000/products/2-20150814031140000000000/2dc0d2e88861f59f5d4a19fb78950173 (0.6ms)
+    - #Write fragment views/products/1-20150814031140000000000/products/2-20150814031140000000000/2dc0d2e88861f59f5d4a19fb78950173 (0.6ms)
+    -#- cache [@products] do
+      - @products.each do |product|
+        %tr
+          %td= product.name
+          %td= product.price
+          %td= link_to 'Show', product
+          %td= link_to 'Edit', edit_product_path(product)
+        %td= link_to 'Destroy', product, :method => :delete, :data => { :confirm => 'Are you sure?' }
+    - #Read fragment views/cheap/products/1-20150814031140000000000/products/2-20150814031140000000000/17e46a473905c0a6fb09eead7170567e (0.8ms)
+    - #Write fragment views/cheap/products/1-20150814031140000000000/products/2-20150814031140000000000/17e46a473905c0a6fb09eead7170567e (0.9ms)
+    - cache [:cheap,@products,I18n.locale] do
+      - @products.each do |product|
+        %tr
+          %td= product.name
+          %td= product.price
+          %td= link_to 'Show', product
+          %td= link_to 'Edit', edit_product_path(product)
+        %td= link_to 'Destroy', product, :method => :delete, :data => { :confirm => 'Are you sure?' }
+    -#- cache :cheap_products, :expire_in=>2.hours do
+      - @products.each do |product|
+        %tr
+          %td= product.name
+          %td= product.price
+          %td= link_to 'Show', product
+          %td= link_to 'Edit', edit_product_path(product)
+        %td= link_to 'Destroy', product, :method => :delete, :data => { :confirm => 'Are you sure?' }
+    -#- @products.each do |product|
+      %tr
+        %td= product.name
+        %td= product.price
+        %td= link_to 'Show', product
+        %td= link_to 'Edit', edit_product_path(product)
+        %td= link_to 'Destroy', product, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Product', new_product_path

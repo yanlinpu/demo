@@ -1,0 +1,23 @@
+defaults: &defaults
+  redis:
+    redis_host: localhost #10.200.247.11
+    redis_port: 6379
+    redis_db: 0
+
+    cache_host: localhost #10.200.247.11
+    cache_port: 6379
+    cache_db: 0
+    cache_namespace: 'demo_catch'
+
+  cache_expires_in:
+    in_seconds: 20
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
+
+
