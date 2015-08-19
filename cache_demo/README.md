@@ -77,6 +77,7 @@
 ####better-error
 
     group :development do
-        gem 'better_errors', '~> 2.1.1'  
+        gem 'better_errors', '~> 2.1.1' # 错误能够在页面调试 
+	gem 'brakeman', '~> 3.0.5' # 检测安全漏洞  brakeman -o outfile.txt
     end
 

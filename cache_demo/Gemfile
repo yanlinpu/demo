@@ -55,6 +55,7 @@ gem 'settingslogic'
 
 group :development do
   gem 'better_errors', '~> 2.1.1'
+  gem 'brakeman', '~> 3.0.5'
 end
 
 #gem install jbuilder -v '2.3.1'
