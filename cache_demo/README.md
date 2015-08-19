@@ -74,4 +74,9 @@
     #[rails-redis-string](http://www.cnblogs.com/fanxiaopeng/p/4197740.html)
     #[redis-tutorial](http://www.runoob.com/redis/redis-tutorial.html)
  
-   
+####better-error
+
+    group :development do
+        gem 'better_errors', '~> 2.1.1'  
+    end
+
