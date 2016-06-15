@@ -1,0 +1,26 @@
+# reids
+redis:
+  route_redis:
+    host: 127.0.0.1
+    port: 6379
+    db:   0
+    password:  # password for redis
+
+  sync_worker_redis:
+    host: 127.0.0.1
+    port: 6379
+    db: 0
+    password:  # password for redis
+    namespace: yanlp
+
+hostname: 192.168.5.173
+git_ssh_port: 22
+
+# log dir
+log_dir: /home/git/production/logs
+pid_dir: /home/git/production/pids
+# sidekiq启动的线程数量
+thread_count: 10
+# 本机执行同步的sidekiq队列名称
+queue_name: yanlinpu
+

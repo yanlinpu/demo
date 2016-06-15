@@ -1,0 +1,12 @@
+source 'https://ruby.taobao.org'
+
+#gem打包：bundle package --all
+#gem本地安装：
+#bundle install --local  
+#或者 gem install vendor/cache/*
+#或者再限制一下 gem install vendor/cache/*.gem
+
+gem 'redis', '3.2.1'
+gem 'sidekiq', '3.2.1'
+gem 'settingslogic', '~> 2.0', '>= 2.0.9'
+

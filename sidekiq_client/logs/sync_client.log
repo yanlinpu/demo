@@ -1,0 +1,12 @@
+I, [2016-06-15T17:51:58.081337 #7679]  INFO -- : push msg error: ErrorClass: NoMethodError, Message: undefined method `Settings' for QueueClient:Module, pathname: yanlinpu, action: create, other: , backtrace: 
+project_sync_client.rb:34:in `push'
+project_sync_client.rb:61:in `push'
+project_sync_client.rb:66:in `<main>'
+I, [2016-06-15T17:54:44.730652 #7772]  INFO -- : push msg error: ErrorClass: NoMethodError, Message: undefined method `Settings' for QueueClient:Module, pathname: github/yanlinpu, action: create, other: , backtrace: 
+project_sync_client.rb:34:in `push'
+project_sync_client.rb:61:in `push'
+project_sync_client.rb:66:in `<main>'
+I, [2016-06-15T17:55:00.511548 #7783]  INFO -- : push msg error: ErrorClass: NoMethodError, Message: undefined method `Settings' for QueueClient:Module, pathname: github/yanlinpu, action: create, other: , backtrace: 
+project_sync_client.rb:35:in `push'
+project_sync_client.rb:62:in `push'
+project_sync_client.rb:67:in `<main>'

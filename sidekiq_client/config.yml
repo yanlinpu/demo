@@ -1,0 +1,26 @@
+# reids
+redis:
+  route_redis:
+    host: 127.0.0.1
+    port: 6379
+    db:   0
+    password:  # password for redis
+
+  #project sync redis
+  sync_worker_redis:
+    host: 127.0.0.1
+    port: 6379
+    db: 0
+    password:  # password for redis
+    namespace: yanlp
+
+# gitlab_git_server server start host
+hostname: 192.168.5.173
+queue_name: yanlinpu
+
+# log dir
+log_dir: /home/git/production/logs
+
+# pid dir
+pid_dir: /home/git/production/pids
+
